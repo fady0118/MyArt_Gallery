@@ -3,10 +3,10 @@ color: azure;
 background-color: rgb(26, 26, 27);
 }
 div.Headline{
-font-size: 2rem;
+font-size: 4vw;
 text-align: center;
-margin-top: 3rem;
-letter-spacing: 0.5rem;
+margin-top: 4vw;
+letter-spacing: 2vw;
 text-transform: uppercase;
 }
 
