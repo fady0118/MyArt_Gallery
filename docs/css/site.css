@@ -1,17 +1,119 @@
 html, body{
-color: azure;
-background-color: rgb(26, 26, 27);
-}
-div.Headline{
-font-size: 4vw;
-text-align: center;
-margin-top: 4vw;
-letter-spacing: 2vw;
-text-transform: uppercase;
+    color: azure;
+    background-color: rgb(26, 26, 27);
 }
 
+.Header-Container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "heading heading heading"
+        "socials nav right-side";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    justify-content: center;
+    background-color: rgb(70, 74, 116);
+    /* background:linear-gradient( rgb(58, 61, 88,1) 0%, rgb(58, 61, 88,1) 50%,  rgb(58, 61, 88,0) 100%); */
+}
+
+.Headline{
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-area: heading;
+    text-decoration: none;
+    color: azure;
+    font-size: 2vw;
+    /* text-align: center; */
+    padding: 1vw;
+    letter-spacing: 0.1vw;
+    box-sizing: border-box;
+}
+
+.header_nav{
+    grid-area:nav;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+} 
+    
+.header_nav_links{
+    list-style: none;
+    column-gap: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+.header_nav_item{
+    font-size: 1.8vw;
+}
+
+.socials{
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: center;
+}
+
+   
+.clickable:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1vw;
+    text-underline-offset: 1vw;
+}
 
 
+
+
+
+.bi-instagram{
+  color: azure;  
+}
+.bi-instagram:hover{
+    color: #9f9faa;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fonts */
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 700 */
+
+.dancing-script-style {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
@@ -21,7 +123,7 @@ text-transform: uppercase;
   
   .roboto-light {
     font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 250;
     font-style: normal;
   }
   
