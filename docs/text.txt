@@ -1,0 +1,15 @@
+    
+    <li class="nav__item">
+        <a href="#Gallery" class="nav__link">Gallery</a>
+    </li>
+
+
+    <!-- =============== Gallery =============== -->
+    <section class="Gallery section" id="Gallery"></section>
+
+    <!-- =============== About =============== -->
+    <section class="About section" id="About">
+
+    </section>
+    <!-- =============== Favorites =============== -->
+    <section class="Favorties section" id="Favorites"></section>
