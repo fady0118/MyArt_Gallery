@@ -23,6 +23,23 @@ const linkAction = () =>{
     navMenu.classList.remove('show__menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/* =============== Image Gallery Generator =============== */
+document.addEventListener('DOMContentLoaded',()=>{
+    const imageContainer = document.getElementById('image_Container');
+    const imageCount = 11;
+    const imageFolder = 'images/Paintings/';
+    const imageExtensions = ['jpg', 'jpeg', 'png', 'gif','webp'];
+
+    for(let i=1;i<=imageCount;i++){
+            const img = document.createElement('img');
+            img.src = `${imageFolder}image${i}.png`;
+            img.id = `image-${i}`;
+            img.alt = `Image ${i}`;
+            imageContainer.appendChild(img);
+        
+    }
+})
 /* =============== Add Blur Header =============== */
 
 

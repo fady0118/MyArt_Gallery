@@ -273,17 +273,13 @@ color:var(--first-color);
 
 .bg__img{
 filter: grayscale(100%) brightness(0.9);
-/* position: absolute;
-top: 13rem;
-right: 3rem; */
 display: inline-block;
 justify-self: right;
 height: 7rem;
-/* position: relative; */
-/* left: 13rem; */
 transform: rotate(15deg);
 z-index: -2;
 }
+
 .footer{
   display: flex;
   justify-content: center;
@@ -294,6 +290,23 @@ z-index: -2;
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   color: var(--text-color);
+}
+
+
+
+/* =============== Gallery =============== */
+#image_Container{
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  overflow: hidden;
+}
+#image-container img {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 /* =============== Button =============== */
 
