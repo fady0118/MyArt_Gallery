@@ -30,15 +30,34 @@ document.addEventListener('DOMContentLoaded',()=>{
     const imageCount = 11;
     const imageFolder = 'images/Paintings/';
     const imageExtensions = ['jpg', 'jpeg', 'png', 'gif','webp'];
+    const ColImgCount =  Math.floor(imageCount/3);
+    const ExtraImg = imageCount%3;
 
-    for(let i=1;i<=imageCount;i++){
+    for(let i=1;i<=3;i++){
+        const column = document.createElement('div');
+        column.className = "ContainerColumn";
+        column.id = `column-${i}`;
+        imageContainer.appendChild(column);
+
+        for(let j=1;j<= ColImgCount;j++){
+            var x = j+((i-1)*ColImgCount);
             const img = document.createElement('img');
-            img.src = `${imageFolder}image${i}.png`;
-            img.id = `image-${i}`;
-            img.alt = `Image ${i}`;
-            imageContainer.appendChild(img);
-        
+            img.src = `${imageFolder}image${x}.png`;
+            img.id = `image-${x}`;
+            img.alt = `Image ${x}`;
+            column.appendChild(img);
+        }     
     }
+
+    for(let n=1;n<=ExtraImg;n++){
+        var imageNum = n + 3*ColImgCount;
+        const img = document.createElement('img');
+        img.src = `${imageFolder}image${imageNum}.png`;
+        img.id = `image-${imageNum}`;
+        img.alt = `Image ${imageNum}`;
+        document.getElementById(`column-${n}`).appendChild(img);
+    }
+    
 })
 /* =============== Add Blur Header =============== */
 
