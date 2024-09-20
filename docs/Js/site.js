@@ -29,35 +29,33 @@ document.addEventListener('DOMContentLoaded',()=>{
     const imageContainer = document.getElementById('image_Container');
     const imageCount = 11;
     const imageFolder = 'images/Paintings/';
-    const imageExtensions = ['jpg', 'jpeg', 'png', 'gif','webp'];
-    const ColImgCount =  Math.floor(imageCount/3);
-    const ExtraImg = imageCount%3;
 
-    for(let i=1;i<=3;i++){
-        const column = document.createElement('div');
-        column.className = "ContainerColumn";
-        column.id = `column-${i}`;
-        imageContainer.appendChild(column);
+    // Create an array of image indices 1 to imageCount
+    const imageIndices = Array.from({ length: imageCount }, (_, i) => i + 1);
 
-        for(let j=1;j<= ColImgCount;j++){
-            var x = j+((i-1)*ColImgCount);
+   // Shuffle the array
+   function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    shuffleArray(imageIndices);
+
+
+    imageIndices.forEach(i => {
+            const box = document.createElement('div');
+            box.className = "box";
+            imageContainer.appendChild(box);
+            
             const img = document.createElement('img');
-            img.src = `${imageFolder}image${x}.png`;
-            img.id = `image-${x}`;
-            img.alt = `Image ${x}`;
-            column.appendChild(img);
-        }     
-    }
+            img.src = `${imageFolder}image${i}.png`;
+            img.id = `image-${i}`;
+            img.alt = `Image ${i}`;
+            box.appendChild(img);
+        } )    
 
-    for(let n=1;n<=ExtraImg;n++){
-        var imageNum = n + 3*ColImgCount;
-        const img = document.createElement('img');
-        img.src = `${imageFolder}image${imageNum}.png`;
-        img.id = `image-${imageNum}`;
-        img.alt = `Image ${imageNum}`;
-        document.getElementById(`column-${n}`).appendChild(img);
-    }
-    
 })
 /* =============== Add Blur Header =============== */
 
