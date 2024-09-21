@@ -57,8 +57,32 @@ document.addEventListener('DOMContentLoaded',()=>{
         } )    
 
 })
-/* =============== Add Blur Header =============== */
+/* =============== Favorite Image Generator =============== */
+document.addEventListener('DOMContentLoaded',()=>{
+    const FavoriteContainer = document.getElementById('fav__container');
+    const imageFolder = 'images/Paintings/';
 
+    const FavIndices = [1,2,3,4,11];
+    FavIndices.forEach(i=>{
+        const FavImg = document.createElement('img');
+        FavImg.src=`${imageFolder}image${i}.png`
+        FavImg.alt=`image ${i}`;
+        FavImg.id=`image_${i}`;
+        FavImg.className='Fav_image';
+        FavoriteContainer.appendChild(FavImg);
+    })
+        
+    
+})
+
+/* =============== Add Blur Header =============== */
+const blurHeader = () =>{
+    const header = document.getElementById('header')
+    this.scrollY>=50? header.classList.add('blur_header')
+    : header.classList.remove('blur_header');
+
+}
+window.addEventListener('scroll',blurHeader);
 
 /* =============== Show Scroll Up =============== */
 
