@@ -163,7 +163,8 @@ img{
     top: 0;
     right: -100%;
     background-color: hsla(0, 0%, 6%, 0.2);
-    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+     backdrop-filter: blur(16px);
     width: 70%;
     height: 100%;
     padding: 6rem 3rem 0;
@@ -268,12 +269,12 @@ justify-content: center;
 align-items: center;
 }
 
-#social-mail, #social-insta, #deviant{
+#social_mail, #social_insta, #deviant{
   color: var(--title-color);
   font-size: var(--h2-font-size);
   transition: color 0.4s;
 }
-#social-mail :hover, #social-insta :hover, #deviant:hover{
+#social_mail:hover, #social_insta:hover, #deviant:hover{
 color:var(--first-color);
 }
 
@@ -349,8 +350,76 @@ z-index: -2;
   }
 
 }
-/* =============== Button =============== */
 
+/* =============== Copyright =============== */
+.Copyright_body{
+  position:absolute;
+  top: var(--header-height);
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 80%;
+
+}
+.copyright_title{
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.signature{
+  padding-bottom: 1rem;
+}
+
+.rule{
+  margin: 1rem;
+}
+.copyright_text{
+  padding-bottom: 1rem;
+}
+#credit_link,#Contact_mail{
+  text-decoration: none;
+  color: var(--text-color);
+}
+/* =============== About =============== */
+.About_Container{
+  position:absolute;
+  top: var(--header-height);
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 80%;
+}
+.About_title{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.About_Section{
+  padding-bottom: 1rem;
+}
+.about_text{
+  padding-bottom: 1rem;
+  line-height: 1rem;
+}
+.aboutclosure{
+  line-height: 1.5rem;
+}
+.socials__list{
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.social__item{
+  text-decoration: none;
+  color: var(--text-color);
+}
+.about_social_insta, .about_social_gmail, .about_social_deviantart{
+  margin:0 0.5rem;
+}
+#about-gmail{
+  margin:0.5rem 0 0.5rem 0.5rem;
+}
+#about-insta,  #about-deviant{
+  margin: 0.5rem;
+}
 
 
 
