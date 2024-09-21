@@ -61,3 +61,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         }     
 
 })
+
+
+<!-- =============== Background ===============
+<main class="main"></main>
+    <img src="images/622175.png" alt="image" class="home__bg">
+    <div class="home__shadow"></div>
+
+</main> -->
