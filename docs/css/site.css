@@ -22,6 +22,7 @@
   --normal-font-size:0.9rem;
   --small-font-size:0.8rem;
   --smaller-font-size:0.7rem;
+  --smallest-font-size:0.3rem;
   /* font weight */
   --font-thin:100;
   --font-light:250;
@@ -98,7 +99,8 @@ img{
 
 /* =============== Reusable CSS Classes =============== */
 .container{
-  max-width: 1120px;
+  /* max-width: 1120px; */
+
   margin-inline: 1.5rem;
 }
 
@@ -127,6 +129,7 @@ img{
   left: 0;
   /* background-image: linear-gradient(180deg, hsla(0, 0%, 0%, 0.726), hsla(0, 0%, 0%, 0)); */
   z-index: var(--z-fixed);
+  padding-bottom: 2rem;
 }
 
 .nav{
@@ -259,6 +262,7 @@ img{
 }
 .home__container{
   row-gap: 1rem;
+  margin: auto;
 }
 .home__bg, .home__shadow{
   position:absolute;
@@ -321,7 +325,7 @@ z-index: -2;
   align-items: center;
 }
 .copyright{
-  font-size: var(--smaller-font-size);
+  font-size: calc(var(--smallest-font-size) + 0.8vw);
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   color: var(--text-color);
@@ -336,7 +340,7 @@ z-index: -2;
   width:calc(100% - 3rem);
   position: absolute;
   top: var(--header-height);
-  /* margin: 0 auto ; */
+  margin: auto auto;
   left: 50%;
   transform: translate(-50%, 0);  
   columns:4;
@@ -486,4 +490,42 @@ z-index: -2;
 }
 .fav_image_container img:hover{
   width: 30%;
+}
+
+/* =============== For Large Devices =============== */
+@media screen and (min-width: 1150px) {
+  .fav_image_container{
+    width: 60%;
+    height: calc(var(--favorite-height) + 10rem);
+  }
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav__toggle, .nav__close, .nav__img-1, .nav__img-2{
+  display: none;
+ }
+ .home__container{
+  padding-top: 3rem;
+  row-gap: 1.5rem;
+ }
+ .nav__menu{
+  width: initial;
+ }
+ .nav__list{
+  flex-direction: row;
+  column-gap: 4rem;
+ }
+ .Favorties-section h1#Favorite-title {
+  font-size: var(--h1-font-size);
+  margin: 3rem 0 1rem;
+ }
+#image_Container, .About_Container, .Copyright_body{
+  margin-top: 2rem;
+}
+.home__social{
+  column-gap: 2rem;
+}
+.Copyright_body h3{
+  line-height: 3rem;
+}
 }
