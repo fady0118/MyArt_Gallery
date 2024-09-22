@@ -330,9 +330,11 @@ z-index: -2;
   text-underline-offset: 0.2rem;
   color: var(--text-color);
   margin: 1rem 0 3rem;
+  transition: color ease-in-out 0.4s;
 }
-
-
+.copyright:hover{
+  color:var(--first-color);
+}
 
 /* =============== Gallery =============== */
 #image_Container{
