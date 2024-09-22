@@ -94,7 +94,9 @@ const modal = document.getElementById("myModal");
 const modalImg = document.createElement('img');
 modalImg.id = 'Img01';
 modalImg.className = 'modal_content';
-modal.appendChild(modalImg);
+if (modal){
+   modal.appendChild(modalImg);
+}
 
 function clickFunction(id){
     const modalImage = document.getElementById(id);
