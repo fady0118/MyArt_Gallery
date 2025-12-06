@@ -510,10 +510,10 @@ z-index: -2;
 .modal_content{
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 800px;
+  height: 80%;
+  width: auto;
   animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-duration: 0.4s;
 }
 @keyframes zoom {
   from{
