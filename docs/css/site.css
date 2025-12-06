@@ -498,7 +498,7 @@ z-index: -2;
   display: none;
   position: fixed;
   z-index: var(--z-fixed);
-  padding-top: 100px;
+  padding: 20% 10%;
   left: 0;
   top: 0;
   width: 100%;
@@ -510,8 +510,6 @@ z-index: -2;
 .modal_content{
   margin: auto;
   display: block;
-  height: 80%;
-  width: auto;
   animation-name: zoom;
   animation-duration: 0.4s;
 }
