@@ -3,6 +3,7 @@ import {resolve} from 'path'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
+	base:'/MyArt_Gallery/',
 	plugins:[imagetools()],
 	root:'./docs',
 	build:{
