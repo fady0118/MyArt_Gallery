@@ -40,7 +40,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 document.addEventListener('DOMContentLoaded',()=>{
     const imageContainer = document.getElementById('image_Container');
     if(imageContainer){
-    const imageCount = 11;
+    const imageCount = thumbnailsURLs.length;
     // Create an array of image indices 1 to imageCount
     const imageIndices = Array.from({ length: imageCount }, (_, i) => i);
     shuffleArray(imageIndices);

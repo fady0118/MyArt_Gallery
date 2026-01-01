@@ -2,7 +2,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "start": "vite preview",
+        "start": "vite dev",
         "deploy": "vite build && gh-pages -d dist"
     },
     "devDependencies": {
