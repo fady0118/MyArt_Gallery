@@ -1,7 +1,7 @@
 import { mobileNavUtils, navigate } from "../utility.js";
-
 export default function header() {
   const navBar = document.createElement("nav");
+  
   navBar.classList = "nav container";
   navBar.innerHTML = `<a dest="#/#top" class="nav__logo">Fady's Gallery</a>
 
@@ -28,8 +28,8 @@ export default function header() {
                         <i class="fa-solid fa-xmark"></i>
                         <!-- <i class="ri-close-line"></i> -->
                     </div>
-                    <img src="images/mona-lisa.png" alt="image" class="nav__img-1">
-                    <img src="images/paint-roller.png" alt="image" class="nav__img-2">
+                    <img src="./images/mona-lisa.png" alt="image" class="nav__img-1">
+                    <img src="./images/paint-roller.png" alt="image" class="nav__img-2">
                 
                     </div>
                         <!-- Toggle button -->
