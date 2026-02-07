@@ -10,9 +10,6 @@ export default defineConfig({
 		rollupOptions:{
 			input:{
 				main: resolve('docs','./index.html'),
-				about: resolve('docs','./About.html'),
-				copyright: resolve('docs','./copyright.html'),
-				gallery: resolve('docs','./Gallery.html')
 			}
 		},
 		outDir:'../dist',

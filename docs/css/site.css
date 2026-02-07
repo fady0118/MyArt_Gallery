@@ -13,7 +13,7 @@
   --container-color:hsl(0,0%,12%);
   /* Fonts */
   --body-font:"Montserrat", sans-serif;
-  --second-font: "Dancing Script", cursive;
+  --second-font: "Great Vibes", cursive;
   --biggest-font-size:3rem;
   --bigger-font-size:2rem;
   --h1-font-size:1.5rem;
@@ -112,12 +112,12 @@ img{
 .section{
   padding-block: 5rem 1rem;
 }
-.section__title{
-  font-size: var(--bigger-font-size);
+/* .section__title{
   font-family: var(--second-font);
   margin-bottom: 1.5rem;
-  text-align: center;
-}
+   font-size: var(--bigger-font-size);
+ text-align: center;
+} */
 .main{
   overflow: hidden;
 }
@@ -339,13 +339,14 @@ z-index: -2;
 /* =============== Gallery =============== */
 #image_Container{
   
-  width:calc(100% - 3rem);
+  /* width:calc(100% - 3rem);
   position: absolute;
   top: var(--header-height);
   margin: auto auto;
   left: 50%;
-  transform: translate(-50%, 0);  
-  columns:4;
+  transform: translate(-50%, 0);   */
+  margin: calc(1.5*var(--header-height)) 1.5rem 0.5rem;
+  columns: 4;
   column-gap: 1.5rem;
 }
 
@@ -353,7 +354,7 @@ z-index: -2;
   max-width:100%;
   margin-bottom: 1.5rem;
   break-inside: avoid;
-  border-radius: 5%;
+  border-radius: 1.5rem;
   overflow: hidden;
 }
 
@@ -388,12 +389,12 @@ z-index: -2;
 
 /* =============== Copyright =============== */
 .Copyright_body{
-  position:absolute;
+  /* position:absolute;
   top: var(--header-height);
   left: 50%;
   transform: translate(-50%,0);
-  width: 80%;
-
+  width: 80%; */
+  margin: calc(1.5* var(--header-height)) 3rem 0.5rem;
 }
 .copyright_title{
   text-align: center;
@@ -415,11 +416,12 @@ z-index: -2;
 }
 /* =============== About =============== */
 .About_Container{
-  position:absolute;
+  margin: calc(1.5* var(--header-height)) 3rem 0.5rem;
+  /* position:absolute;
   top: var(--header-height);
   left: 50%;
   transform: translate(-50%,0);
-  width: 80%;
+  width: 80%; */
 }
 .About_title{
   text-align: center;
@@ -564,9 +566,7 @@ z-index: -2;
   font-size: var(--h1-font-size);
   margin: 3rem 0 1rem;
  }
-#image_Container, .About_Container, .Copyright_body{
-  margin-top: 2rem;
-}
+
 .home__social{
   column-gap: 2rem;
 }
