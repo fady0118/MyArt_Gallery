@@ -7,7 +7,6 @@ import homepage, { homepageUtils } from "./views/homepage.js";
 const main = document.getElementById("main");
 
 function renderHomepge(hash = undefined) {
-  console.log("render homepage");
   main.innerHTML = "";
   main.appendChild(homepage());
   homepageUtils();
@@ -15,7 +14,6 @@ function renderHomepge(hash = undefined) {
 }
 function renderGallery() {
   const { galleryEl, modalEl } = gallery();
-  console.log("render gallery");
   main.innerHTML = "";
   main.appendChild(galleryEl);
   main.appendChild(modalEl);
@@ -35,7 +33,6 @@ function renderCopyright() {
 
 let previousHash;
 export default async function router() {
-  console.log("router in");
   const hash = window.location.hash.split("#")[1];
   // prevent unnecessary re-renders in case the user clicks on a link that lead to the same view
   if (hash === previousHash) {
@@ -63,5 +60,4 @@ export default async function router() {
       renderHomepge();
   }
   previousHash = hash;
-  console.log("router out");
 }

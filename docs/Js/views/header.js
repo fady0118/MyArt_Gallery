@@ -47,7 +47,6 @@ function headerUtils() {
     link.style.cursor = "pointer";
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log(`${link.innerHTML} clicked!`);
       navigate(link.getAttribute("dest"));
     });
   });

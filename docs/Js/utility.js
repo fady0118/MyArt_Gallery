@@ -14,15 +14,14 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 function scrollTo(secId) {
-  if (secId === "top") {
-    scrollToTop();
-    return;
-  }
   const secEl = document.getElementById(secId);
   if (secEl) {
     secEl.scrollIntoView();
+    return;
   }
+  scrollToTop();
 }
+
 // mobile nav bar actions (show/hide)
 function mobileNavUtils() {
   const navMenu = document.getElementById("nav-menu");
@@ -41,7 +40,7 @@ function mobileNavUtils() {
     });
   }
   if (navLinks) {
-    navLinks.forEach(link =>
+    navLinks.forEach((link) =>
       link.addEventListener("click", () => {
         navMenu.classList.remove("show__menu");
       }),

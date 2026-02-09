@@ -35,8 +35,6 @@ function renderGalleryImages() {
 }
 
 function clickFunction(i) {
-    console.log(imagesURLs[i])
-
   const modal = document.getElementById("myModal");
   modal.innerHTML='<span id="Modal_close"><i class="fa-solid fa-xmark"></i></span>';
   const modalImg = document.createElement("img");

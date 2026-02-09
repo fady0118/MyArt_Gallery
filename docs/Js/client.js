@@ -3,7 +3,6 @@ import { navigate } from "./utility.js";
 import header, { headerUtils } from "./views/header.js";
 
 window.addEventListener("hashchange", () => {
-  console.log("hash change", location.hash);
   router();
 });
 document.addEventListener("DOMContentLoaded", () => {
